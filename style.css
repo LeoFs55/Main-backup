@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    height: 500px;
+    width: 500px;
+    background-color: aquamarine;
+    margin: -25px 0 0 -25px;
+}
+
+#welcome-message {
+    color: #333;
+}
