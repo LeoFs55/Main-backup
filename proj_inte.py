@@ -2,7 +2,7 @@ def num_validation(entrada):
     try:
         num = int(entrada)
         return True, num
-    except:
+    except ValueError:
         return False,'O valor inserido não é um número.'
     
 def bi_validation(numero):
