@@ -121,16 +121,34 @@ def calculo_dec_p_hexa(num):
 
     return f'O número {num} é igual a {hexa} em HEXADECIMAL'
 
-print(f"""{20*'-'}
-Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
-{20*'-'}
-BINARIO P/ DECIMAL      (PRESS '1')
-OCTAL P/ DECIMAL        (PRESS '2')
-HEXADECIMAL P/ DECIMAL  (PRESS '3')
-DECIMAL P/ BINARIO      (PRESS '4')
-DECIMAL P/ OCTAL        (PRESS '5')
-DECIMAL P/ HEXADECIMAL  (PRESS '6') """)
-opcao = input('R:')
+def entrada():
+    try:
+        while True:    
+            opcao = input('R:')
+            num_opcao = int(opcao)
+            bi_para_decimal =  num_opcao == 1
+            oct_para_decimal = num_opcao == 2
+            hex_para_decimal = num_opcao == 3
+            dec_para_binario = num_opcao == 4
+            dec_para_octal = num_opcao == 5
+            dec_para_hexa = num_opcao == 6
+            if bi_para_decimal:
+                return True
+            elif oct_para_decimal:
+                return True
+            elif hex_para_decimal:
+                return True
+            elif dec_para_binario:
+                return True
+            elif dec_para_octal:
+                return True
+            elif dec_para_hexa:
+                return True
+            else:
+                print('Você não digitou um número correspondente aos fornecidos.')
+                continue
+    except ValueError:
+        print('Você não digitou um número')
 def dec_binario():
     while True:
         entrada = input('Digite um numero DECIMAL:')
@@ -212,16 +230,25 @@ def hexa_dec():
 
             break
         
-             
-if opcao == '1':
+print(f"""{20*'-'}
+Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
+{20*'-'}
+BINARIO P/ DECIMAL      (PRESS '1')
+OCTAL P/ DECIMAL        (PRESS '2')
+HEXADECIMAL P/ DECIMAL  (PRESS '3')
+DECIMAL P/ BINARIO      (PRESS '4')
+DECIMAL P/ OCTAL        (PRESS '5')
+DECIMAL P/ HEXADECIMAL  (PRESS '6') """)
+        
+if entrada():
     binario_dec()
-elif opcao == '2':
+elif entrada():
     octal_dec()
-elif opcao == '3':
+elif entrada():
     hexa_dec()
-elif opcao == '4':
+elif entrada():
     dec_binario()
-elif opcao == '5':
+elif entrada():
     dec_octal()
-elif opcao == '6':
+elif entrada():
     dec_hexa()
