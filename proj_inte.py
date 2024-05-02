@@ -230,25 +230,25 @@ def hexa_dec():
 
             break
         
-print(f"""{20*'-'}
-Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
-{20*'-'}
-BINARIO P/ DECIMAL      (PRESS '1')
-OCTAL P/ DECIMAL        (PRESS '2')
-HEXADECIMAL P/ DECIMAL  (PRESS '3')
-DECIMAL P/ BINARIO      (PRESS '4')
-DECIMAL P/ OCTAL        (PRESS '5')
-DECIMAL P/ HEXADECIMAL  (PRESS '6') """)
+# print(f"""{20*'-'}
+# Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
+# {20*'-'}
+# BINARIO P/ DECIMAL      (PRESS '1')
+# OCTAL P/ DECIMAL        (PRESS '2')
+# HEXADECIMAL P/ DECIMAL  (PRESS '3')
+# DECIMAL P/ BINARIO      (PRESS '4')
+# DECIMAL P/ OCTAL        (PRESS '5')
+# DECIMAL P/ HEXADECIMAL  (PRESS '6') """)
         
-if entrada():
-    binario_dec()
-elif entrada():
-    octal_dec()
-elif entrada():
-    hexa_dec()
-elif entrada():
-    dec_binario()
-elif entrada():
-    dec_octal()
-elif entrada():
-    dec_hexa()
+# if entrada():
+#     binario_dec()
+# elif entrada():
+#     octal_dec()
+# elif entrada():
+#     hexa_dec()
+# elif entrada():
+#     dec_binario()
+# elif entrada():
+#     dec_octal()
+# elif entrada():
+#     dec_hexa()
