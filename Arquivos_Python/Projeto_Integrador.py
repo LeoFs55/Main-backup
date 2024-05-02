@@ -5,7 +5,7 @@ def num_validation(entrada):
         num = int(entrada)
         return True, num
     except ValueError:
-        return False,'O valor inserido não é um número.'        
+        return False, ValueError        
 
 #Binario
 
@@ -41,39 +41,28 @@ def calculo_dec_p_bi(num):
 
 def binario(num, base):
     if base == 10:
-
-        while True:
-
-            entrada = num
-
-            if num_validation(entrada):
-                print(calculo_dec_p_bi(entrada))
-                break
-
-            else:
-                print(num_validation(entrada)[1])
-                continue
+            
+        entrada = num
+        if num_validation(entrada):
+            return calculo_dec_p_bi(entrada)
+        else:
+            return num_validation(entrada)[1]
 
     elif base == 2:
-        
-        while True:
-            entrada = num
-            if num_validation(entrada):
-                quant = len(entrada)
 
-                if bi_validation(entrada)[0]:
-                    print(calculo_bi_p_dec(entrada,quant))
+        entrada = num
+        if num_validation(entrada):
+            quant = len(entrada)
 
-                else:
-                    print(bi_validation(entrada)[1])
-                    continue
-
-                break
+            if bi_validation(entrada)[0]:
+                return calculo_bi_p_dec(entrada,quant)
+            
             else:
-                print(num_validation(entrada)[1])
-
-                continue
-
+                return bi_validation(entrada)[1]
+            
+        else:
+                
+            print(num_validation(entrada)[1])
 #Octal
 
 def oct_validation(numero):
@@ -88,7 +77,7 @@ def oct_validation(numero):
 
 def calculo_dec_p_octal(num):
     if num == '0':
-        return f'O número {num} é igual a 0 em OCTADECIMAL'
+        return 0
     octal = ''
     decimal  = int(num)
     while decimal > 0:
@@ -107,32 +96,24 @@ def calculo_oct_p_dec(entrada,quant):#Calculo de OCTAL PARA DECIMAL
 
 def octadecimal(num, base):
     if base == 10:    
-        while True:
-            entrada = num
-            if num_validation(entrada):
-                print(calculo_dec_p_octal(entrada))
-                break
-            else:
-                print(num_validation(entrada)[1])
-                continue
+        entrada = num
+        if num_validation(entrada):
+            return calculo_dec_p_octal(entrada)
+                
+        else:
+            return num_validation(entrada)[1]
+
     elif base == 8:
-        while True:
-            entrada = num
-            if num_validation(entrada):
-                quant = len(entrada)
+        entrada = num
+        if num_validation(entrada):
+            quant = len(entrada)
 
-                if oct_validation(entrada)[0]:
-                    print(calculo_oct_p_dec(entrada,quant))
-
-                else:
-                    print(oct_validation(entrada)[1])
-                    continue
-
-                break
+            if oct_validation(entrada)[0]:
+                return calculo_oct_p_dec(entrada,quant)
             else:
-                print(num_validation(entrada)[1])
-
-                continue
+                return oct_validation(entrada)[1]
+        else:
+            print(num_validation(entrada)[1])
 
 #Hexadecimal
 
@@ -169,7 +150,7 @@ def calculo_hex_p_dec(entrada,quant):#Calculo de HEXA PARA DECIMAL
 
 def calculo_dec_p_hexa(num):
     if num == '0':
-        return f'O número {num} é igual a 0 em HEXADECIMAL'
+        return 0
     hexa = ''
     decimal  = int(num)
     while decimal > 0:
@@ -194,61 +175,26 @@ def calculo_dec_p_hexa(num):
 
 def hexadecimal(num, base):
     if base == 10:    
-        while True:
-            entrada = num
-            if num_validation(entrada):
-                print(calculo_dec_p_hexa(entrada))
-                break
-            else:
-                print(num_validation(entrada)[1])
-                continue
+        entrada = num
+        if num_validation(entrada):
+            return calculo_dec_p_hexa(entrada)
+        else:
+            return num_validation(entrada)[1]
+
     if base == 16:
-        while True:
-            entrada = num
-            if True:
-                quant = len(entrada)
+        entrada = num
 
-                if hex_validation(entrada)[0]:
-                    print(calculo_hex_p_dec(entrada,quant))
+        quant = len(entrada)
+        if hex_validation(entrada)[0]:
+            return calculo_hex_p_dec(entrada,quant)
 
-                else:
-                    print(hex_validation(entrada)[1])
-                    continue
-
-                break
+        else:
+            return hex_validation(entrada)[1]
 
 #Definindo qual o tipo de entrada
 
-def entrada():
-    try:
-        while True:    
-            opcao = input('R:')
-            num_opcao = int(opcao)
-            bi_para_decimal =  num_opcao == 1
-            oct_para_decimal = num_opcao == 2
-            hex_para_decimal = num_opcao == 3
-            dec_para_binario = num_opcao == 4
-            dec_para_octal = num_opcao == 5
-            dec_para_hexa = num_opcao == 6
-            if bi_para_decimal:
-                return True
-            elif oct_para_decimal:
-                return True
-            elif hex_para_decimal:
-                return True
-            elif dec_para_binario:
-                return True
-            elif dec_para_octal:
-                return True
-            elif dec_para_hexa:
-                return True
-            else:
-                print('Você não digitou um número correspondente aos fornecidos.')
-                continue
-    except ValueError:
-        print('Você não digitou um número')
-
-# print(f"""{20*'-'}
+def calculadora():
+    print(f"""{20*'-'}
 # Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
 # {20*'-'}
 # BINARIO P/ DECIMAL      (PRESS '1')
@@ -257,16 +203,36 @@ def entrada():
 # DECIMAL P/ BINARIO      (PRESS '4')
 # DECIMAL P/ OCTAL        (PRESS '5')
 # DECIMAL P/ HEXADECIMAL  (PRESS '6') """)
-        
-# if entrada():
-#     binario_dec()
-# elif entrada():
-#     octal_dec()
-# elif entrada():
-#     hexa_dec()
-# elif entrada():
-#     dec_binario()
-# elif entrada():
-#     dec_octal()
-# elif entrada():
-#     dec_hexa()
+    opcao = input('R:')
+    try:   
+        num_opcao = int(opcao)
+        bi_para_decimal =  num_opcao == 1
+        oct_para_decimal = num_opcao == 2
+        hex_para_decimal = num_opcao == 3
+        dec_para_binario = num_opcao == 4
+        dec_para_octal = num_opcao == 5
+        dec_para_hexa = num_opcao == 6
+        if num_opcao > 6:
+            return 'Você não digitou um número correspondente aos fornecidos.'
+    except ValueError:
+        print('Você não digitou um número')     
+    if bi_para_decimal:
+        num = input('Digite o numero: ')
+        return binario(num, 2)
+    elif oct_para_decimal:
+        num = input('Digite o numero: ')
+        return octadecimal(num, 8)
+    elif hex_para_decimal:
+        num = input('Digite o numero: ')
+        return hexadecimal(num, 16)
+    elif dec_para_binario:
+        num = input('Digite o numero: ')
+        return binario(num, 10)
+    elif dec_para_octal:
+        num = input('Digite o numero: ')
+        return octadecimal(num, 10)
+    elif dec_para_hexa:
+        num = input('Digite o numero: ')
+        return hexadecimal(num, 10)
+
+print(calculadora())
