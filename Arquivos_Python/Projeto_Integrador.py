@@ -37,7 +37,7 @@ def calculo_dec_p_bi(num):
         resto = decimal % 2
         binario = str(resto) + binario
         decimal //= 2
-    return num
+    return binario
 
 def binario(num, base):
     if base == 10:
@@ -95,8 +95,7 @@ def calculo_dec_p_octal(num):
         resto = decimal % 8
         octal = str(resto) + octal
         decimal //= 8
-
-    return num
+    return octal
 
 def calculo_oct_p_dec(entrada,quant):#Calculo de OCTAL PARA DECIMAL
     resultado = 0
@@ -191,7 +190,7 @@ def calculo_dec_p_hexa(num):
         else:
             hexa = str(resto) + hexa
 
-    return num
+    return hexa
 
 def hexadecimal(num, base):
     if base == 10:    

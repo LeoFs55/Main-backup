@@ -4,4 +4,4 @@ print(__name__)
 
 import Projeto_Integrador
 
-Projeto_Integrador.binario("1010",2)
+Projeto_Integrador.hexadecimal('132',10)
