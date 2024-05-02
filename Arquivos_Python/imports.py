@@ -5,13 +5,12 @@
 # Desvantagens: nomes grandes
 # import sys
 
-import proj_inte
-
-proj_inte.decimal
+# import proj_inte
+# proj_inte.decimal
 
 # platform = 'A MINHA'
-# print(sys.platform)
 # print(platform)
+# print(sys.platform)
 
 # partes - from nome_modulo import objeto1, objeto2
 # Vantagens: nomes pequenos
@@ -31,7 +30,9 @@ proj_inte.decimal
 # alias 2 - from nome_modulo import objeto as apelido
 # from sys import exit as ex
 # from sys import platform as pf
+# from sys import platform as pf, exit as ex
 
+# ex()
 # print(pf)
 
 # Vantagens: você pode reservar nomes para seu código
