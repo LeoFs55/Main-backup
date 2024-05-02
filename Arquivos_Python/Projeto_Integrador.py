@@ -44,7 +44,7 @@ def binario(num, base):
             
         entrada = num
         if num_validation(entrada):
-            return calculo_dec_p_bi(entrada)
+            return int(calculo_dec_p_bi(entrada))
         else:
             return num_validation(entrada)[1]
 
@@ -55,7 +55,7 @@ def binario(num, base):
             quant = len(entrada)
 
             if bi_validation(entrada)[0]:
-                return calculo_bi_p_dec(entrada,quant)
+                return int(calculo_bi_p_dec(entrada,quant))
             
             else:
                 return bi_validation(entrada)[1]
@@ -98,7 +98,7 @@ def octadecimal(num, base):
     if base == 10:    
         entrada = num
         if num_validation(entrada):
-            return calculo_dec_p_octal(entrada)
+            return int(calculo_dec_p_octal(entrada))
                 
         else:
             return num_validation(entrada)[1]
@@ -109,7 +109,7 @@ def octadecimal(num, base):
             quant = len(entrada)
 
             if oct_validation(entrada)[0]:
-                return calculo_oct_p_dec(entrada,quant)
+                return int(calculo_oct_p_dec(entrada,quant))
             else:
                 return oct_validation(entrada)[1]
         else:
@@ -186,7 +186,7 @@ def hexadecimal(num, base):
 
         quant = len(entrada)
         if hex_validation(entrada)[0]:
-            return calculo_hex_p_dec(entrada,quant)
+            return int(calculo_hex_p_dec(entrada,quant))
 
         else:
             return hex_validation(entrada)[1]
@@ -234,5 +234,3 @@ def calculadora():
     elif dec_para_hexa:
         num = input('Digite o numero: ')
         return hexadecimal(num, 10)
-
-print(calculadora())
