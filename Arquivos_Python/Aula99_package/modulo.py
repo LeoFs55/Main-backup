@@ -1,3 +1,15 @@
+
+val = 'Boi'
+
+from .modulo_b import subtrair
+
+
+def somar(n1,n2):
+    resultado = int(n1+n2)
+    return resultado
+
+# print(subtrair(1,2))
+
 #Validacao do numero
 
 def num_validation(entrada):
@@ -11,7 +23,7 @@ def num_validation(entrada):
 
 def bi_validation(numero):
 
-    tupla_numero = tuple(numero)
+    tupla_numero = tuple(str(numero))
 
     for i in tupla_numero:
         if int(i)>1:
@@ -55,7 +67,7 @@ def binario(num, base):
             quant = len(str(entrada))
 
             if bi_validation(entrada)[0]:
-                return int(calculo_bi_p_dec(entrada,quant))
+                return (calculo_bi_p_dec(entrada,quant))
             
             else:
                 return bi_validation(entrada)[1]
@@ -190,47 +202,3 @@ def hexadecimal(num, base):
 
         else:
             return hex_validation(entrada)[1]
-
-#Definindo qual o tipo de entrada
-
-def calculadora():
-    print(f"""{20*'-'}
-# Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
-# {20*'-'}
-# BINARIO P/ DECIMAL      (PRESS '1')
-# OCTAL P/ DECIMAL        (PRESS '2')
-# HEXADECIMAL P/ DECIMAL  (PRESS '3')
-# DECIMAL P/ BINARIO      (PRESS '4')
-# DECIMAL P/ OCTAL        (PRESS '5')
-# DECIMAL P/ HEXADECIMAL  (PRESS '6') """)
-    opcao = input('R:')
-    try:   
-        num_opcao = int(opcao)
-        bi_para_decimal =  num_opcao == 1
-        oct_para_decimal = num_opcao == 2
-        hex_para_decimal = num_opcao == 3
-        dec_para_binario = num_opcao == 4
-        dec_para_octal = num_opcao == 5
-        dec_para_hexa = num_opcao == 6
-        if num_opcao > 6:
-            return 'Você não digitou um número correspondente aos fornecidos.'
-    except ValueError:
-        print('Você não digitou um número')     
-    if bi_para_decimal:
-        num = input('Digite o numero: ')
-        return binario(num, 2)
-    elif oct_para_decimal:
-        num = input('Digite o numero: ')
-        return octadecimal(num, 8)
-    elif hex_para_decimal:
-        num = input('Digite o numero: ')
-        return hexadecimal(num, 16)
-    elif dec_para_binario:
-        num = input('Digite o numero: ')
-        return binario(num, 10)
-    elif dec_para_octal:
-        num = input('Digite o numero: ')
-        return octadecimal(num, 10)
-    elif dec_para_hexa:
-        num = input('Digite o numero: ')
-        return hexadecimal(num, 10)
