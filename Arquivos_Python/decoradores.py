@@ -14,6 +14,6 @@ def is_string(param):
        raise TypeError('Paramentro deve ser um str')
    
 
-validation_reverse_string = creat_func(reverse_string)
-reverse = validation_reverse_string('321')
+validation_reverse_string = creat_func(func=reverse_string)
+reverse = validation_reverse_string(string='321')
 print(reverse) 

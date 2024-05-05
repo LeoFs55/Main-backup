@@ -8,8 +8,8 @@ salas = [['Maria','Helena'],['Elaine'],['Luiz', 'João', 'Eduarda']]
 # a,*_,ultimo = lista
 # print(a,ultimo)
 
-print(*lista, sep='\n')
-# print(*string)
+print(*lista, sep='\n', end=' ')
+print(*string)
 # print(*tuplas)
 
 # print(*salas,sep='\n')

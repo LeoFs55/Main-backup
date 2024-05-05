@@ -9,8 +9,9 @@ while True:
     a = input(f'({x}x)Digite a palavra: ').lower()
     letra_certa = 0
     local_certo = 0
+    string = ''
     if len(a) == 5:   
-        for i in range(5):
+        for i in a:
             if a[i] == palavra[i]:
                 letra_certa+=1
                 local_certo+=1
@@ -19,6 +20,7 @@ while True:
                 print(f'A letra {a[i]} está certa, mas no local errado.')
                 if a[i] == palavra[i]:
                     letra_certa+=1
+            
         if local_certo == 5 and letra_certa == 5:
             print(len('Você acertou a palavra, parabéns!')*'=')
             print('Você acertou a palavra, parabéns!')
