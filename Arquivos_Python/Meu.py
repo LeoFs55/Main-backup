@@ -12,25 +12,17 @@ def digitos(cpf):
         for i in tupla_resultado_cpf:
             soma += i
         digito1 = (soma*10)%11
-        if digito1 > 9:
-            digito1 = 0
-        else: 
-            digito1 = digito1
+        digito1 = 0 if digito1 > 9 else digito1
         return digito1
     def second_digit(cpf_int):
-        for indice, mult in enumerate(range(11,1,-1)):
-            resultado = cpf_int[indice] * mult
-            resultado_cpf.append(resultado)
-        tupla_resultado_cpf = tuple(resultado_cpf)
+        quant = len(cpf)
+        resultado = [cpf_int[indice] * mult for indice, mult in enumerate(range(quant,1,-1))]
         soma = 0
-        for i in tupla_resultado_cpf:
-            soma += i
-        digito2 = (soma*10)%11
-        if digito2 > 9:
-            digito2 = 0
-        else: 
-            digito2 = digito2
-        return digito2
+        for i in resultado:
+            soma += i         
+        digito = ((soma*10)%11)
+        digito = 0 if digito > 9 else digito
+        return digito
     def validation(cpf_int):
         for indice, mult in enumerate(range(10,1,-1)):
             resultado = cpf_int[indice] * mult
