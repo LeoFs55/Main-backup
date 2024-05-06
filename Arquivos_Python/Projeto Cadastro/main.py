@@ -1,14 +1,9 @@
 import packages
 
-name = 'Leonardo'
-surname = 'Figorelli Santana'
-age = '28/10/2005'
-cpf = packages.cpf('48448072855')
+name = packages.name('Leo3ardo')
+surname = packages.surname('Figo1elli Santana')
+age = packages.date_validation('38/10/2005')
+cpf = packages.cpf('48448082855')
+password = packages.password('Senha123')
 
-with open('Arquivos_Python\Projeto Cadastro\dados.txt','a') as pagina:
-    pagina.write(f"""
-    'nome':{name},
-    'sobrenome':{surname},
-    'data-nascimento':{age},
-    'cpf':{cpf},
-""")
+packages.data_input(name,surname,age,cpf,password)
