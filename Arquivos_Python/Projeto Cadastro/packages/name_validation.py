@@ -1,8 +1,15 @@
 def first_name_validation(name):
-    valid_name = name.isalpha()
-    if valid_name:
+    nome = name.split() if ' ' in name else name
+    if isinstance(nome, list):
+        valid_name = [i.isalpha() for i in nome]
+        if False in valid_name:
+            return False
         return True
-    return False
+    else:
+        valid_name = nome.isalpha()        
+        if valid_name:
+            return True
+        return False
 
 def rep_first_letter(name):
     if first_name_validation(name):
