@@ -1,30 +1,12 @@
 
-    'nome':leonardo,
-    'sobrenome':figorelli santana,
-    'data-nascimento':2005-10-28,
-    'cpf':48448072855,
+    'nome':thales,
+    'sobrenome':freire cuellas,
+    'data-nascimento':2005-12-13,
+    'cpf':49111428805,
     'senha':Senha123!
 
     'nome':leonardo,
     'sobrenome':figorelli santana,
     'data-nascimento':2005-10-28,
     'cpf':48448072855,
-    'senha':Sua senha deve ter '!',',"#","$","%","&",",'(',')','*','+',',','-','.','/','_','+'
-
-    'nome':leonardo,
-    'sobrenome':figorelli santana,
-    'data-nascimento':2005-10-28,
-    'cpf':cpf-invalido,
-    'senha':Sua senha deve ter '!',',"#","$","%","&",",'(',')','*','+',',','-','.','/','_','+'
-
-    'nome':leonardo,
-    'sobrenome':figorelli santana,
-    'data-nascimento':data invalida,
-    'cpf':cpf-invalido,
-    'senha':Sua senha deve ter '!',',"#","$","%","&",",'(',')','*','+',',','-','.','/','_','+'
-
-    'nome':Nome Invalido,
-    'sobrenome':sobrenome invalido,
-    'data-nascimento':data invalida,
-    'cpf':cpf-invalido,
-    'senha':Sua senha deve ter '!',',"#","$","%","&",",'(',')','*','+',',','-','.','/','_','+'
+    'senha':Senha123!

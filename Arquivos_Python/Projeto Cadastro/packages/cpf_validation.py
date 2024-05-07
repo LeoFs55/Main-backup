@@ -30,6 +30,6 @@ def cpf(cpf):
         cpf_valid = cpf_inter if cpf == cpf_inter else 'cpf-invalido'
         return cpf_valid
     else:
-        raise ValueError('Input Invalid')
+        raise ValueError('input-invalid')
 
     

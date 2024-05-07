@@ -217,20 +217,22 @@ def calculadora():
     except ValueError:
         print('Você não digitou um número')     
     if bi_para_decimal:
-        num = input('Digite o numero: ')
+        num = input('Digite o numero BINARIO: ')
         return binario(num, 2)
     elif oct_para_decimal:
-        num = input('Digite o numero: ')
+        num = input('Digite o numero OCTADECIMAL: ')
         return octadecimal(num, 8)
     elif hex_para_decimal:
-        num = input('Digite o numero: ')
+        num = input('Digite o numero HEXADECIMAL: ')
         return hexadecimal(num, 16)
     elif dec_para_binario:
-        num = input('Digite o numero: ')
+        num = input('Digite o numero DECIMAL: ')
         return binario(num, 10)
     elif dec_para_octal:
-        num = input('Digite o numero: ')
+        num = input('Digite o numero DECIMAL: ')
         return octadecimal(num, 10)
     elif dec_para_hexa:
-        num = input('Digite o numero: ')
+        num = input('Digite o numero DECIMAL: ')
         return hexadecimal(num, 10)
+
+print(f'O Resultada da operação é: {calculadora()}')
