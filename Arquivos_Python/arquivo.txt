@@ -1,0 +1,23 @@
+Funcao executada: Calculo para decimal. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal2. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal2. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal. Argumento:(10). Resultado 2
+Funcao executada: Calculo para decimal. Argumento:(101010).Resultado 1 10 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(101010).Resultado 1 10 Resultado2 10
+Funcao executada: Calculo para decimal2. Argumento:(10).Resultado 1 42 Resultado2 42
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 10 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 2 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(101010).Resultado 1 42 Resultado2 10
+Funcao executada: Calculo para decimal2. Argumento:(10).Resultado 1 2 Resultado2 42
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 2 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 2 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(101010).Resultado 1 42 Resultado2 10
+Funcao executada: Calculo para decimal2. Argumento:(10).Resultado 1 2 Resultado2 42
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 2 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 2 Resultado2 10
+Funcao executada: Calculo para decimal. Argumento:(101010).Resultado 1 42 Resultado2 10
+Funcao executada: Calculo para decimal2. Argumento:(10).Resultado 1 2 Resultado2 42
+Funcao executada: Calculo para decimal. Argumento:(10).Resultado 1 2 Resultado2 10

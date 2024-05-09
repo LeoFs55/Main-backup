@@ -1,3 +1,28 @@
+def binario(num, base):
+    if base == 10:
+            
+        entrada = num
+        if num_validation(entrada):
+            return int(calculo_dec_p_bi(entrada))
+        else:
+            return num_validation(entrada)[1]
+
+    elif base == 2:
+
+        entrada = num
+        if num_validation(entrada):
+            quant = len(str(entrada))
+
+            if bi_validation(entrada)[0]:
+                return int(calculo_bi_p_dec(entrada,quant))
+            
+            else:
+                return bi_validation(entrada)[1]
+            
+        else:
+                
+            print(num_validation(entrada)[1])
+            
 from packages.validations import num_validation
 
 
@@ -30,28 +55,3 @@ def calculo_dec_p_bi(num):
         binario = str(resto) + binario
         decimal //= 2
     return binario
-
-def binario(num, base):
-    if base == 10:
-            
-        entrada = num
-        if num_validation(entrada):
-            return int(calculo_dec_p_bi(entrada))
-        else:
-            return num_validation(entrada)[1]
-
-    elif base == 2:
-
-        entrada = num
-        if num_validation(entrada):
-            quant = len(str(entrada))
-
-            if bi_validation(entrada)[0]:
-                return int(calculo_bi_p_dec(entrada,quant))
-            
-            else:
-                return bi_validation(entrada)[1]
-            
-        else:
-                
-            print(num_validation(entrada)[1])
