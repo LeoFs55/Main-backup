@@ -37,7 +37,7 @@ def arquivamento_de_tentativas(nome,outra_entrada):
 #         binario = str(resto) + binario
 #         decimal //= 2
 #     return binario
-@arquivamento_de_tentativas(nome='Calculo para decimal2',outra_entrada='101010')
+
 @arquivamento_de_tentativas(nome='Calculo para decimal',outra_entrada='1010')
 def calculo(entrada):
     resultado = 0
