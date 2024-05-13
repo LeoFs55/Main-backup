@@ -1,1 +1,1 @@
-import packages.data_input
+from packages.data_input import entrada

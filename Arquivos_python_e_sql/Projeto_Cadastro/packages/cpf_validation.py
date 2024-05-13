@@ -22,6 +22,7 @@ def num_validation_on_cpf(cpf):
         return True
     else:
         return False
+    
 def cpf(cpf):
     if num_validation_on_cpf(cpf):
         with_1_digit = calculo_digit1(cpf)
@@ -30,6 +31,6 @@ def cpf(cpf):
         cpf_valid = cpf_inter if cpf == cpf_inter else 'cpf-invalido'
         return cpf_valid
     else:
-        return 'cpf-invalido',False
+        return False
 
     

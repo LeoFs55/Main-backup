@@ -21,8 +21,8 @@ def rep_first_letter(name):
 
 def name(name):
     if first_name_validation(name) and rep_first_letter(name):
-        return name.lower()
-    return 'Nome Invalido',False
+        return True
+    return False
 
 def surname(surname):
     surnames = surname.split()
@@ -30,4 +30,4 @@ def surname(surname):
     for i in surnames:
         validations_surname.append(first_name_validation(i))
         validations_surname.append(rep_first_letter(i))
-    return ('sobrenome invalido',False) if False in validations_surname else surname.lower()
+    return False if False in validations_surname else surname.lower()

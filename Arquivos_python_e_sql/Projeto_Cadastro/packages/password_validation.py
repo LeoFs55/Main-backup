@@ -1,7 +1,6 @@
 erro = ''
 def first_letter(password):
     first = password[0].isupper()
-    print(first,password)
     if first:
         return True
     global erro
@@ -21,12 +20,10 @@ def special_caracter(password):
     for i in special:
         if i in password:
             return True
-    global erro
-    erro = "Sua senha deve ter '!','"',"#","$","%","&","'",'(',')','*','+',',','-','.','/','_','+'"
     return False
 
 def password(password):
     if special_caracter(password) and quantidade(password) and first_letter(password):
         return password
-    return erro,False
+    return False
 
