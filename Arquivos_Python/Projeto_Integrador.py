@@ -195,7 +195,7 @@ def hexadecimal(num, base):
 
 def calculadora():
     print(f"""{20*'-'}
-# Calculado de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
+# Calculadora de BINARIO, OCTAL E HEXADECIMAL PARA DECIMAL
 # {20*'-'}
 # BINARIO P/ DECIMAL      (PRESS '1')
 # OCTAL P/ DECIMAL        (PRESS '2')

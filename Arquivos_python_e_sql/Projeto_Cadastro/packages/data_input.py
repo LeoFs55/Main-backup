@@ -6,12 +6,7 @@ import packages.email_validation as email_validation
 import packages.formatting as formatt
 import mysql.connector
 
-conexao = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='1234',
-        database='bd_project',
-    )
+conexao = mysql.connector.connect(host='localhost',user='root',password='1234',database='bd_project',)
 cursor = conexao.cursor()
 
 def rep_user(cpf):
