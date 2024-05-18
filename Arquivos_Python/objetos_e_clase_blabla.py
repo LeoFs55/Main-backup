@@ -1,9 +1,11 @@
-# class Usuario:
-#     def __init__(self):
-#         self.nome = 'Leonardo Figorelli Santana'
-#         self.data_nascimento = '28/10/2005'
-#         self.cpf = '484.480.728-55'
+class Usuario:
+    def __init__(self,/,nome,data_nascimento,cpf):
+        self.nome = nome
+        self.data_nascimento = data_nascimento
+        self.cpf = cpf
 
+    def alterar_nome(self, nome):
+        self.nome = nome
 
 # user = Usuario()
 # print(user.nome)
@@ -23,5 +25,7 @@
 
 # print(calculo.subtracao(1,2))
 
-a = 'A1'.lower()
-print(a)
+usuario1 = Usuario(nome='Leonardo Figorelli Santana',data_nascimento='28/10/2005',cpf='48448072855')
+usuario1.alterar_nome('Leonafardo')
+print(usuario1.nome)
+
