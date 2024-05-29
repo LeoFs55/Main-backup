@@ -1,17 +1,13 @@
 def calculo_digit1(cpf):
     resultado = [int(cpf[indice]) * mult for indice, mult in enumerate(range(10,1,-1))]
-    soma = 0
-    for i in resultado:
-        soma += i         
+    soma = sum(resultado)        
     digito = ((soma*10)%11)
     digito = 0 if digito > 9 else digito
     return str(digito)
 
 def calculo_digit2(cpf):
     resultado = [int(cpf[indice]) * mult for indice, mult in enumerate(range(11,1,-1))]
-    soma = 0
-    for i in resultado:
-        soma += i         
+    soma = sum(resultado)       
     digito = ((soma*10)%11)
     digito = 0 if digito > 9 else digito
     return str(digito)
