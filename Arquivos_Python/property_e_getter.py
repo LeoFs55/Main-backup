@@ -92,10 +92,9 @@ class Pessoa:
 
     @cpf.setter
     def cpf(self,cpf):
-        try:
-            if cpf.isnumeric() and cpfValid(cpf):
-                self._cpf = cpf
-        except ValueError:
+        if cpf.isnumeric() and self._cpfValid(cpf):
+            self._cpf = cpf
+        else:
             self._cpf = None
 
     def register(self, name,birth,cpf):
@@ -103,21 +102,21 @@ class Pessoa:
         for atributo, valor in atributos:
             setattr(self, atributo, valor)
 
-def cpfValid(cpf):
+    def _cpfValid(self, cpf):
 
-    if not cpf.isnumeric():
-        return False
-            
-    listInd = [10,11]
-    cpf_base = cpf[:9]
-    for i in listInd:
-        resultado = [int(cpf[indice]) * mult for indice, mult in enumerate(range(i,1,-1))]
-        soma = sum(resultado)        
-        digito = ((soma*10)%11)
-        digito = 0 if digito > 9 else digito
-        cpf_base += str(digito)
-    return True if cpf_base == cpf else False
+        if not cpf.isnumeric():
+            return False
+                
+        listInd = [10,11]
+        cpf_base = cpf[:9]
+        for i in listInd:
+            resultado = [int(cpf[indice]) * mult for indice, mult in enumerate(range(i,1,-1))]
+            soma = sum(resultado)        
+            digito = ((soma*10)%11)
+            digito = 0 if digito > 9 else digito
+            cpf_base += str(digito)
+        return True if cpf_base == cpf else False
 
-user = Pessoa('leonardo', '28/10/2005', '48448072855')
-print(user.birth)
+user = Pessoa('leonardo', '28/10/2005', '48458072855')
+print(user.cpf)
 
